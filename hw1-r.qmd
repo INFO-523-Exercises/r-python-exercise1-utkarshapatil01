@@ -22,8 +22,12 @@ Package focuses on **methods and tools for dealing with imbalanced data sets**, 
 
 #### **Installing DMwR2 Package :**
 
-```{r message=FALSE, warning=FALSE}
-install.packages("DMwR2")
+```{r eval=TRUE, message=FALSE, warning=FALSE}
+if (!require("DMwR2"))
+  install.packages("DMwR2")
+
+library("DMwR2")
+
 ```
 
 the **help()** function is used to access documentation and information about functions, data sets, packages, and other objects in the R environment.
@@ -33,7 +37,7 @@ help(package="DMwR2")
 
 ```
 
-To see the list of pre-loaded data in base R packgaes, type the function **data**():
+To see the list of pre-loaded data in base R packages, type the function **data**():
 
 ```{r}
 data() #loads the information of the datasets
@@ -943,7 +947,7 @@ mylist
 
 ```{r}
 newlist <- list(age=19, sex="male");
-expandedlist <-c(mylist, newlist) #cocating 2 lists
+expandedlist <-c(mylist, newlist) #concating 2 lists
 expandedlist
 ```
 
@@ -1111,6 +1115,7 @@ my.dataframe
 Tibbles are designed to make data manipulation and analysis more intuitive and less error-prone.
 
 ```{r}
+if( !require("tibble"))
 install.packages("tibble")
                                                                   library(tibble)
 ```
@@ -1123,6 +1128,7 @@ my.tibble
 ```
 
 ```{r}
+if( !require("palmerpenguins"))
 install.packages("palmerpenguins")
 library(palmerpenguins)
 data(penguins)
@@ -1145,9 +1151,7 @@ x <- 1:16
 mode(x) #finding type of frame
 ```
 
-```{r}
-dim(x) <- c(4,4)
-class(x) 
+```{}
 ```
 
 ```{r}
@@ -1217,6 +1221,7 @@ class(penguins[1:15, c("bill_length_mm")])
 Provides a set of functions and a consistent, user-friendly grammar for working with data frames or tibbles.
 
 ```{r}
+if( !require("dplyr"))
 install.packages("dplyr")
 library(dplyr)
 ```
