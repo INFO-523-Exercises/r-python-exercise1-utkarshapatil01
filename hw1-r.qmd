@@ -1,5 +1,6 @@
 ---
 title: "hw1-r-utkarsha"
+author: "Utkarsha Patil"
 format: pdf
 editor: visual
 ---
@@ -1151,7 +1152,7 @@ x <- 1:16
 mode(x) #finding type of frame
 ```
 
-```{}
+```         
 ```
 
 ```{r}
